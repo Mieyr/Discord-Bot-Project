@@ -1,14 +1,3 @@
-# INSTALL DISCORD LIBRARY
-# sudo apt install python3-pip
-# pip3 install discord.py
-
-# Notes
-
-## When ever its a command, must be @client.command()
-## async def {Command}(ctx):
-
-## To send message, use await ctx.send("{Message}")
-
 import discord
 import random
 import Gacha_List
@@ -218,8 +207,8 @@ async def on_message(message):
             await message.channel.send(f'Your lucky number is {response} {username}!')
             return
         
-        elif user_message.lower() == 'swuck mwy bwolls pwease':
-            await message.channel.send('Oki UwU')
+        elif user_message.lower() == 'REDACTED':
+            await message.channel.send('REDACTED')
 
         elif user_message.lower() == 'man':
             await message.channel.send('man')
