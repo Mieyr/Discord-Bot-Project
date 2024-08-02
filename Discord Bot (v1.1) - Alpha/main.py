@@ -69,7 +69,7 @@ class RavuBot(commands.Bot):
         super().__init__(command_prefix = prefix, intents = intents)
 
     # async def setup_hook(self):
-    #     await self.tree.sync(guild = discord.Object(id=191453821174531128)) # Loads the hybrid commands
+    #     await self.tree.sync(guild = discord.Object(id=INSERT SERVER_ID)) # Loads the hybrid commands
     #     print(f"Synced slash commands for {self.user}.")
     
     # async def close(self):
@@ -319,17 +319,17 @@ async def reminder(ctx, reason, time: int):
 
 @client.command()
 async def shutdown(ctx):
-    if str(ctx.author.id) == '464965108955611137':
+    if str(ctx.author.id) == 'INSERT USER_ID':
         await ctx.send("Ordered received, shutting down")
         print("Ravu has shutdown due to an absolute order")
         exit()
     else: 
-        await ctx.send("Bitch boi! You're not authorised to shut me down >:(")  
+        await ctx.send("WARNING! You're not authorised to shut me down >:(")  
 
 # Loading/Booting cogs
 
 async def load():
-    for file in os.listdir('C:\\Users\\shadj\\Desktop\\Coding Projects\\Discord Bot\\Discord Bot(v1.1) - Alpha\\cogs'):
+    for file in os.listdir('INSERT DIRECTORY'):
         if file.endswith('.py'):
             await client.load_extension(f'cogs.{file[:-3]}')
 
@@ -340,7 +340,7 @@ async def main():
 
 # async def database_backup():
 #     # Set the path to the mysqldump command.
-#     mysqldump_path = "C:\\xampp\\mysql\\bin"
+#     mysqldump_path = "INSERT DIRECTORY"
 
 #     # Set the name of the database you want to backup.
 #     database_name = "ravu_bot"
@@ -350,7 +350,7 @@ async def main():
 #     password = ""
 
 #     # Set the path where you want to save the backup file.
-#     backup_path = "C:\\Users\\shadj\\Downloads\\9. Database Backup"
+#     backup_path = "INSERT DIRECTORY"
 
 #     command = [
 #         mysqldump_path,
