@@ -1,0 +1,11 @@
+Area = ['Attic', 
+'Garage', 
+'Bin', 
+'Closet',
+'Toilet',
+'Rooftop',
+'Piano',
+'Car',
+'Pocket',
+'Desk',
+'Drawer']
