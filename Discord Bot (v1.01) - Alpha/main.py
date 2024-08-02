@@ -1,14 +1,3 @@
-# INSTALL DISCORD LIBRARY
-# sudo apt install python3-pip
-# pip3 install discord.py
-
-# Notes
-
-## When ever its a command, must be @client.command()
-## async def {Command}(ctx):
-
-## To send message, use await ctx.send("{Message}")
-
 from ast import Return
 from email.message import Message
 from socket import timeout
@@ -115,7 +104,7 @@ async def on_command_error(ctx, error):
 
 @client.command()
 async def hello(ctx):
-    await ctx.send("hello, bitch.")
+    await ctx.send("hello!")
 
 # Card Help command
 
@@ -553,7 +542,7 @@ async def register(ctx):
 
 @client.command()
 async def unregister(ctx):
-    if ctx.author.id == '464965108955611137':
+    if ctx.author.id == 'INSERT USER_ID':
         try:
             cursor.execute(f"DELETE FROM user_stats WHERE User_ID = {ctx.author.id}")
             await ctx.send("User has been deleted.")
@@ -596,11 +585,11 @@ async def bal(ctx):
 
 @client.command()
 async def shutdown(ctx):
-    if str(ctx.author.id) == '464965108955611137':
+    if str(ctx.author.id) == 'INSERT USER_ID':
         await ctx.send("Ordered received, shutting down")
         print("Ravu has shutdown due to an absolute authorisation")
         exit()
     else: 
-        await ctx.send("Bitch, you're not authorised to shut me down >:(")  
+        await ctx.send("WARNING! You're not authorised to shut me down >:(")  
 
 client.run(token)
